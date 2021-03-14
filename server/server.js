@@ -4,6 +4,23 @@ const express = require('express');
 // create app
 const app = express();
 
+// declare functions
+function performCalculation(object){
+    if (object.operation === '+'){
+        object.result = (Number(object.input1) + Number(object.input2));
+    }
+    else if (object.operation === '-'){
+        object.result = (Number(object.input1) - Number(object.input2));
+    }
+    else if (object.operation === '*'){
+        object.result = (Number(object.input1) * Number(object.input2));
+    }
+    else if (object.operation === '/'){
+        object.result = (Number(object.input1) / Number(object.input2));
+    }
+    console.log(object.result);
+}// end performCalculation
+
 // set up body parser
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -30,8 +47,10 @@ app.get('/calculate', (req, res)=>{
 
 app.post('/calculate', (req, res)=>{
     console.log('in /calculate POST:', req.body);
+    performCalculation(req.body);
     // push into history array
     calculationHistory.push(req.body);
     // send a created code
     res.sendStatus(201);
+    
 })// end /calculate POST

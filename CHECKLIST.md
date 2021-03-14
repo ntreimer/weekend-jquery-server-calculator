@@ -13,18 +13,18 @@
 - [x] spin up server on port 5000
 - [x] add start script to package.json ("start": "node server/server.js")
 ## PHASE 3
-- [ ] user interface with 2 input values (numbers) and 
-- [ ] 6 buttons for +, -, *, /, C (clear), and =
-- [ ] collect inputs on = press into object 
+- [x] user interface with 2 input values (numbers) and 
+- [x] 6 buttons for +, -, *, /, C (clear), and =
+- [x] collect inputs on = press into object 
         {
     input1:
     input2:
     operation:
     }
 - [ ] clear input fields on C
-- [ ] send object to server via ajax POST
+- [x] send object to server via ajax POST
 - [ ] create function in server (or require a module) that can handle all the math operations
-- [ ] on POST, also run a GET that requests the output of the calculation
+- [x] on POST, also run a GET that requests the output of the calculation
 - [ ] keep a record (an array of strings?) of all math operations and solutions on the server
 - [ ] display list of all previous calculations on the page when it loads using a GET request
 - [ ] update list when a new calculation is made

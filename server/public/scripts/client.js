@@ -7,18 +7,22 @@ let calculation = {
 }
 
 function calculationToServer(){
-    console.log('in displayHistory');
+    console.log('in calculationToServer');
     $.ajax({
         type: 'POST',
         url: '/calculate',
         data: calculation
     }).then(function(response){
         console.log('back from POST:', response);
-        displayHistory;
+        displayHistory();
     }).catch(function(err){
         alert('error:', err)
     })//end AJAX
 }// end calculationToServer
+
+function clearCalculation(){
+    console.log('placeholder');
+}// end clearCalculation
 
 function displayHistory(){
     console.log('in displayHistory');
@@ -28,7 +32,7 @@ function displayHistory(){
     }).then(function(response){
         console.log('back from GET:', response);
         // clear previous history from DOM
-        // append response
+        // append response from server
     }).catch(function(err){
         alert('error:', err)
     })//end AJAX
@@ -43,7 +47,7 @@ function onReady(){
     $('#multiplyButton').on('click', updateOperation);
     $('#divideButton').on('click', updateOperation);
     $('#equalButton').on('click', submitCalculation);
-    $('#clearButton').on('click', );
+    $('#clearButton').on('click', clearCalculation);
     // dynamically created click handlers
 }// end onReady
 
@@ -53,14 +57,15 @@ function updateOperation(){
 }// end updateOperation
 
 function submitCalculation(){
+    // add input information to calculation object
     calculation.input1 = $('#input1').val();
     calculation.input2 = $('#input2').val();
+    // if any fields are empty, disallow calculation
     if (calculation.input1 === '' || calculation.input2 === '' || calculation.operation === ''){
         alert('Please complete both input fields and select an operation.')
     }// end if
     else {
-        alert('passed');
-        calculationToServer;
+        calculationToServer();
         $('#input1').val('');
         $('#input2').val('');
     }
