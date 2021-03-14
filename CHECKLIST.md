@@ -7,11 +7,11 @@
 - [x] move over jQuery
 - [x] html, client, and server
 ## PHASE 2
-- [ ] require express
-- [ ] create app
-- [ ] app.use express.static on server/public
-- [ ] spin up server on port 5000
-- [ ] add start script to package.json ("start": "node server/server.js")
+- [x] require express
+- [x] create app
+- [x] app.use express.static on server/public
+- [x] spin up server on port 5000
+- [x] add start script to package.json ("start": "node server/server.js")
 ## PHASE 3
 - [ ] user interface with 2 input values (numbers) and 
 - [ ] 6 buttons for +, -, *, /, C (clear), and =
