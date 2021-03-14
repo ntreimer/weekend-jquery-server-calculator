@@ -13,7 +13,7 @@ To see the fully functional site, please visit [this link](www.url.com).
 
 ## Screen Shot
 
-(images/baseMode.png)
+(images/calculator.png)
 
 ### Prerequisites
 
