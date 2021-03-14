@@ -12,7 +12,7 @@ function appendHistoryToDOM(array){
         $('#historyHere').append(`
         <li>${array[i].input1} ${array[i].operation} ${array[i].input2} = ${array[i].result}</li>
         `);
-    }//end for
+    }// end for    
     $('#resultHere').empty();
     $('#resultHere').append(`
     <span id="currentResult">${array[array.length - 1].result}</span>
@@ -51,7 +51,12 @@ function displayHistory(){
     }).then(function(response){
         console.log('back from GET:', response);
         // append response from server
-        appendHistoryToDOM(response);
+        if (response == false){
+            console.log('no calculation history on server');
+        }
+        else {
+            appendHistoryToDOM(response);
+        }
     }).catch(function(err){
         alert('error:', err)
     })//end AJAX
