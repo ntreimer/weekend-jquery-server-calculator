@@ -10,18 +10,25 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Weekend Challenge 2: Server-Side Calculator</h1>
-    </header>
-    <input type="number" id="input1">
-    <button id="addButton">+</button>
-    <button id="subtractButton">-</button>
-    <button id="multiplyButton">*</button>
-    <button id="divideButton">/</button>
-    <input type="number" id="input2">
-    <button id="equalButton">=</button>
-    <footer>
-        &copy; Nathaniel Treimer 2021
-    </footer>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                <h1>Weekend Challenge 2: Server-Side Calculator</h1>
+            </header>
+            <div id="calculator">
+                <input type="number" id="input1">
+                <button id="addButton">+</button>
+                <button id="subtractButton">-</button>
+                <button id="multiplyButton">*</button>
+                <button id="divideButton">/</button>
+                <input type="number" id="input2">
+                <button id="equalButton">=</button>
+                <button id="clearButton">C</button>
+            </div>
+            <div id="answerHere"></div>
+            <div id="historyHere"></div>
+        </div>
+        <footer>&copy; Nathaniel Treimer 2021</footer>
+    </div>
 </body>
 </html>

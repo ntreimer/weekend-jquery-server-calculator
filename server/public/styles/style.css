@@ -16,4 +16,17 @@ h1 {
 footer {
     background-color: burlywood;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5em;             /* Footer height */
 }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5em;    /* Footer height */
+  }
