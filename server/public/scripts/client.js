@@ -34,7 +34,13 @@ function calculationToServer(){
 }// end calculationToServer
 
 function clearCalculation(){
-    console.log('placeholder');
+    $('#input1').val('');
+    $('#input2').val('');
+    calculation = {
+        input1: '',
+        input2: '',
+        operation: ''
+    }
 }// end clearCalculation
 
 function displayHistory(){

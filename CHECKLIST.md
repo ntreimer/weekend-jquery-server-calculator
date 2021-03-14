@@ -30,7 +30,7 @@
 - [x] update list when a new calculation is made
 ## STRETCH
 - [ ] convert interface to look and behave like a calculator
-- [ ] only allow POST call to happen if all necessary input is ready
+- [x] only allow POST call to happen if all necessary input is ready
 - [ ] allow user to clear the history by clicking on a button. 
         (Technically this shouldn't be a GET or a POST. Look into making a DELETE request!)
 - [ ] allow user to click on an entry in the History list to re-run that calculation
