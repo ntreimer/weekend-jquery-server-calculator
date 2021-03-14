@@ -1,0 +1,19 @@
+body {
+    background-color: brown;
+    margin: 0;
+}
+
+header {
+    background-color: burlywood;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+footer {
+    background-color: burlywood;
+    text-align: center;
+}
