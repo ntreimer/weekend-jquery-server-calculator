@@ -1,11 +1,11 @@
 
 
 ## PHASE 1
-- [ ] git/npm init (--y)
-- [ ] npm install express
-- [ ] set up folders
-- [ ] move over jQuery
-- [ ] html, client, and server
+- [x] git/npm init (--y)
+- [x] npm install express
+- [x] set up folders
+- [x] move over jQuery
+- [x] html, client, and server
 ## PHASE 2
 - [ ] require express
 - [ ] create app
