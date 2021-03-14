@@ -23,11 +23,11 @@
     }
 - [ ] clear input fields on C
 - [x] send object to server via ajax POST
-- [ ] create function in server (or require a module) that can handle all the math operations
+- [x] create function in server (or require a module) that can handle all the math operations
 - [x] on POST, also run a GET that requests the output of the calculation
-- [ ] keep a record (an array of strings?) of all math operations and solutions on the server
-- [ ] display list of all previous calculations on the page when it loads using a GET request
-- [ ] update list when a new calculation is made
+- [x] keep a record of all math operations and solutions on the server
+- [x] display list of all previous calculations on the page when it loads using a GET request
+- [x] update list when a new calculation is made
 ## STRETCH
 - [ ] convert interface to look and behave like a calculator
 - [ ] only allow POST call to happen if all necessary input is ready

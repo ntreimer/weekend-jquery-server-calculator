@@ -38,5 +38,4 @@ app.post('/calculate', (req, res)=>{
     calculationHistory.push(req.body);
     // send a created code
     res.sendStatus(201);
-    
 })// end /calculate POST

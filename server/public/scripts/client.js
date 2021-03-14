@@ -6,6 +6,15 @@ let calculation = {
     operation: ''
 }
 
+function appendHistoryToDOM(array){
+    $('#historyHere').empty();
+    for (let i = 0; i < array.length; i++) {
+        $('#historyHere').append(`
+        <li>${array[i].input1} ${array[i].operation} ${array[i].input2} ${array[i].result}</li>
+        `);
+    }//end for
+}//end appendHistoryToDOM
+
 function calculationToServer(){
     console.log('in calculationToServer');
     $.ajax({
@@ -31,8 +40,8 @@ function displayHistory(){
         url: '/calculate'
     }).then(function(response){
         console.log('back from GET:', response);
-        // clear previous history from DOM
         // append response from server
+        appendHistoryToDOM(response);
     }).catch(function(err){
         alert('error:', err)
     })//end AJAX
