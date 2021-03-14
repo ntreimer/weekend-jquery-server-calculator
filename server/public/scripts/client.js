@@ -10,9 +10,13 @@ function appendHistoryToDOM(array){
     $('#historyHere').empty();
     for (let i = 0; i < array.length; i++) {
         $('#historyHere').append(`
-        <li>${array[i].input1} ${array[i].operation} ${array[i].input2} ${array[i].result}</li>
+        <li>${array[i].input1} ${array[i].operation} ${array[i].input2} = ${array[i].result}</li>
         `);
     }//end for
+    $('#resultHere').empty();
+    $('#resultHere').append(`
+    <h2 id="currentResult">${array[array.length - 1].result}</h2>
+    `);
 }//end appendHistoryToDOM
 
 function calculationToServer(){

@@ -21,7 +21,7 @@
     input2:
     operation:
     }
-- [ ] clear input fields on C
+- [x] clear input fields on C
 - [x] send object to server via ajax POST
 - [x] create function in server (or require a module) that can handle all the math operations
 - [x] on POST, also run a GET that requests the output of the calculation
