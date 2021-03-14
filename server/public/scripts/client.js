@@ -15,7 +15,7 @@ function appendHistoryToDOM(array){
     }//end for
     $('#resultHere').empty();
     $('#resultHere').append(`
-    <h2 id="currentResult">${array[array.length - 1].result}</h2>
+    <span id="currentResult">${array[array.length - 1].result}</span>
     `);
 }//end appendHistoryToDOM
 

@@ -3,6 +3,22 @@ body {
     margin: 0;
 }
 
+#calculator {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#content-wrap {
+    padding-bottom: 2.5em;    /* Footer height */
+}
+
+#currentResult {
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 header {
     background-color: burlywood;
     padding: 0;
@@ -11,6 +27,10 @@ header {
 
 h1 {
     margin: 0;
+}
+
+h2 {
+    text-align: center;
 }
 
 footer {
@@ -25,8 +45,16 @@ footer {
 #page-container {
     position: relative;
     min-height: 100vh;
-  }
-  
-  #content-wrap {
-    padding-bottom: 2.5em;    /* Footer height */
-  }
+}
+
+#restultHistory {
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#restultHistory h3 {
+    margin-left: 25px;
+}
