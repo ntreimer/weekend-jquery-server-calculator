@@ -1,5 +1,6 @@
 $(document).ready(onReady);
 
+// create object to store inputs
 let calculation = {
     input1: '',
     input2: '',
@@ -7,12 +8,15 @@ let calculation = {
 }
 
 function appendHistoryToDOM(array){
+    // clear previous history
     $('#historyHere').empty();
+    // loop through response from server to append new history to DOM
     for (let i = 0; i < array.length; i++) {
         $('#historyHere').append(`
         <li>${array[i].input1} ${array[i].operation} ${array[i].input2} = ${array[i].result}</li>
         `);
     }// end for    
+    // empty and then show current answer
     $('#resultHere').empty();
     $('#resultHere').append(`
     <span id="currentResult">${array[array.length - 1].result}</span>
@@ -21,6 +25,7 @@ function appendHistoryToDOM(array){
 
 function calculationToServer(){
     console.log('in calculationToServer');
+    // use AJAX to POST the /calculate route to send calculation object to server
     $.ajax({
         type: 'POST',
         url: '/calculate',
@@ -33,7 +38,9 @@ function calculationToServer(){
     })//end AJAX
 }// end calculationToServer
 
+
 function clearCalculation(){
+    // function to clear input fields and object
     $('#input1').val('');
     $('#input2').val('');
     calculation = {
@@ -44,6 +51,7 @@ function clearCalculation(){
 }// end clearCalculation
 
 function displayHistory(){
+    // function for our GET on /calculate route, grabs info from server array
     console.log('in displayHistory');
     $.ajax({
         type: 'GET',
